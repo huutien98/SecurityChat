@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "282723123870",
+    "project_id": "udchat-56e67",
+    "storage_bucket": "udchat-56e67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:282723123870:android:1cb36da0c4e69a84a2318f",
+        "android_client_info": {
+          "package_name": "com.example.securitychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "282723123870-smq8bsppbd9kms7bdfkht6137gj5e7c4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1UWHenQDWSdq5iT00Wyz5Aq4C8rGZpX4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "282723123870-smq8bsppbd9kms7bdfkht6137gj5e7c4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

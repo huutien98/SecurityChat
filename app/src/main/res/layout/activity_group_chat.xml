@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".GroupChatActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="624dp"
+        android:layout_above="@+id/Linearlayout"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/grayBackground"
+        android:hapticFeedbackEnabled="false" />
+
+    <LinearLayout
+        android:id="@+id/Linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+
+        android:background="@color/grayBackground"
+
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/eMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_et_mesage"
+            android:ems="10"
+            android:hint="Soạn tin nhắn"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:inputType="textPersonName"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/send"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+
+            android:background="@drawable/bg_et_send"
+            android:src="@android:drawable/ic_menu_send" />
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.6"
+
+                app:tint="@color/white" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/avatar"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/backArrow"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/userNames"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:text="Ngoc Hap"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/profile_image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.523" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>
