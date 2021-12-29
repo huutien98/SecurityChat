@@ -73,27 +73,24 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
                 .build();
         googleApiClient.connect();
 
-        binding.checkBoxCapcha.setOnClickListener(view -> {
-            if (binding.checkBoxCapcha.isChecked()){
+
+
+        binding.btnSignin.setOnClickListener(v -> {
+            clickcount=clickcount+1;
+            if (clickcount > 3){
                 SafetyNet.SafetyNetApi.verifyWithRecaptcha(googleApiClient,SiteKey)
                         .setResultCallback(recaptchaTokenResult -> {
                             Status status = recaptchaTokenResult.getStatus();
                             if (status.isSuccess()){
                                 Toast.makeText(getApplicationContext(),"Xác thực capcha thành công",
-                                Toast.LENGTH_LONG).show();
+                                        Toast.LENGTH_LONG).show();
                                 checkInfomation();
                             }else {
                                 Toast.makeText(getApplicationContext(),"capcha không chính xác",
                                         Toast.LENGTH_LONG).show();
                             }
                         });
-            }
-        });
 
-        binding.btnSignin.setOnClickListener(v -> {
-            clickcount=clickcount+1;
-            if (clickcount > 3){
-                binding.checkBoxCapcha.setVisibility(View.VISIBLE);
                 Toast.makeText(getApplicationContext(),"xác nhận tôi không phải là robot!",Toast.LENGTH_LONG).show();
             }else {
                 checkInfomation();
